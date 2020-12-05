@@ -2,6 +2,15 @@
 #include <stdlib.h>
 #include <unistd.h>
 
+#define MAX_HEAP 2*1024
+#define MAX_OBJS 64
+char heap[MAX_HEAP];
+int pheap;
+void *obj_arr[MAX_OBJS];
+int pobj;
+
+
+
 FILE *popen(const char *command, const char *mode);
 int pclose(FILE *stream);
 
@@ -22,7 +31,7 @@ int main(void)
     
     while(1){
         printf("Hello World\n");
-        sleep(1);
+        sleep(10);
     }
     return 0;
 }
